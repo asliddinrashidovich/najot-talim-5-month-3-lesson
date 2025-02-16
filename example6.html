@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example 6</title>
+</head>
+<body>
+    <div class="example6">
+        <h2>JavaScriptda pop-up boxlar</h2>
+        <p id="result"></p>
+        <p id="propt__result"></p>
+        <button id="alrt">Alert</button>
+        <button id="Confirmation">Confirmation</button>
+        <button id="promt">Prompt</button>
+    </div>
+    <script>
+        const alertBnt = document.getElementById('alrt');
+        const confir = document.getElementById('Confirmation');
+        const promt = document.getElementById('promt');
+        const result = document.getElementById('result');
+        const promptResult = document.getElementById('propt__result');
+
+        alertBnt.addEventListener('click', () => {
+            alert('Diqqat! Bu Alert box!')
+        })
+        confir.addEventListener('click', () => {
+            let agree = confirm('Shartlarga rozimisiz?');
+            result.innerHTML = `${agree  ? 'Yes' : 'No'}`
+        })
+        promt.addEventListener('click', () => {
+            let name = prompt(`Iltimos, o'zingizni tanishtirsangiz.`,`Ismingiz?`);
+            console.log(name)
+            let resultPrompt = name != null ? `Assalomu alaykum, ${name}! Qandaysiz?` : `Ismingizni kiritmadingiz, afsus.`
+            promptResult.innerHTML = resultPrompt
+            // result.innerHTML = `${agree  ? 'Yes' : 'No'}`
+        })
+        
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example 3</title>
+</head>
+<body>
+    <div class="example2">
+        <p>Ichimliklar ro'yhati:</p>
+        <ol>
+            <li>Qahva</li>
+            <li>Choy</li>
+            <li>Sharbat</li>
+            <li>Sut</li>
+            <li>Suv</li>
+        </ol>
+        <p>Ichimlik raqamini kiritib, tugmani bosing.</p>
+        <input type="text">
+        <button>tanlamoq</button>
+        <p>Sizning tanlovingiz: <span></span></p>
+    </div>
+    <script>
+        const btn = document.querySelector('button')
+        const result = document.querySelector('span')
+        
+        btn.addEventListener('click', () => {
+           const inputVal = +document.querySelector('input').value
+           switch(inputVal) {
+               case 1:
+                   result.innerHTML = `Qahva`
+                   break;
+               case 2:
+                   result.innerHTML = `Choy`
+                   break;
+               case 3:
+                   result.innerHTML = `Sharbat`
+                   break;
+               case 4:
+                   result.innerHTML = `Sut`
+                   break;
+               case 5:
+                   result.innerHTML = `Suv`
+                   break;
+               default:
+                   result.innerHTML = `Mavjud bo'lmagan ichimlik`
+           }
+       })
+
+    </script>
+</body>
+</html>

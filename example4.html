@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example 4</title>
+</head>
+<body>
+    <div class="example4">
+        <p>Dokumentga yangi tugma qo'shishlik uchun quyidagi tugmani bosing:</p>
+        <button onclick="yangiTugma()">Yangi tugma</button>
+        <button onclick="yangiPara()">Yangi paragraf</button>
+        <button onclick="delet()">Paragrafni o'chirish</button>
+    </div>
+    <script>
+        const ex4 = document.querySelector('.example4')
+        
+        function yangiTugma() {
+            let btn = document.createElement('button');
+            btn.innerHTML = 'Yangi tugma';
+            btn.onclick = function() {yangiTugma()}
+            ex4.appendChild(btn)
+        }
+        function yangiPara() {
+            let para =  document.createElement('p');
+            para.innerHTML = 'Bu yangi paragraf';
+            ex4.appendChild(para)
+        }
+        function delet() {
+            ex4.removeChild(document.getElementsByTagName('p')[1])
+        }
+
+    </script>
+</body>
+</html>

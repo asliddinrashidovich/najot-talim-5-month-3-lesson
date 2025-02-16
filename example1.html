@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example 1</title>
+</head>
+<body>
+    <div class="example1">
+        <p id="ex1Matn">Bu matn almashadi</p>
+        <p>Bu matn qoladi</p>
+        <button id="ex1Btn">Menu bosing</button>
+    </div>
+    <script>
+        const ex1Matn = document.getElementById('ex1Matn');
+        const ex1Btn = document.getElementById('ex1Btn');
+
+        ex1Btn.addEventListener('click', () => {
+            ex1Matn.innerHTML = `Salom!`
+        })
+    </script>
+</body>
+</html>

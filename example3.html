@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example 3</title>
+    <style>
+        .greenclass {
+            color: green;
+        }
+        .redclass {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="example3">
+        <h1>Assalomu alaykum!</h1>
+        <p >Quyidagi tugmani bosilsa, h1 elementiga "class" atributi beriladi. Uning qiymati "greenclass" bo'ladi.</p>
+        <button id="ex2BtnGreen">Menu bosing</button>
+        <button id="ex2BtnRed">Menu ham bosing</button>
+    </div>
+    <script>
+        const ex3Header = document.querySelector('.example3 h1')
+        const ex3Para = document.querySelector('.example3 p')
+        const ex3Btnred = document.querySelector('#ex2BtnGreen')
+        const ex3Btngreen = document.querySelector('#ex2BtnRed')
+
+        ex3Btnred.addEventListener('click', ()=> {
+            ex3Header.setAttribute('class', 'greenclass')
+        })
+        ex3Btngreen.addEventListener('click', ()=> {
+            ex3Para.setAttribute('class', 'redclass')
+        })
+    </script>
+</body>
+</html>
